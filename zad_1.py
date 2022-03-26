@@ -10,11 +10,12 @@ def card(numb_card=input('Введите номер карты: ')):
     else:
         numb_card = list(numb_card)
         numb_card_new = []
-        for i in numb_card[0:4]:
-            numb_card_new.append(i)
-        for star in numb_card[4:]:
+        for star in numb_card[:12]:
             star = '*'
             numb_card_new.append(star)
+        for i in numb_card[12:]:
+            numb_card_new.append(i)
+
         return ' '.join(numb_card_new)
 
 
